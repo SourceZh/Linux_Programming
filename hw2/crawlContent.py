@@ -62,7 +62,7 @@ def gettitle(path, savepath):
 
 def start():
 	# threads = []
-	for year in range(2015, 2016):
+	for year in range(2008, 2016):
 	# 	crawlThread = mythread(year)
 	# 	crawlThread.start()
 	# 	threads.append(crawlThread)
