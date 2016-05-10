@@ -1,6 +1,14 @@
 #!/usr/local/bin/python3
 import sys
 
+###################################
+# 	A simple word frequency count 
+# program. Nothing to say.
+#					DoubleZ
+#					2015.05.10
+###################################
+
+
 def usage():
 	print("Usage - "+sys.argv[0]+" N")
 	print("		Where N is in [1,5]")
