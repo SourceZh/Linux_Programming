@@ -6,11 +6,11 @@ from bs4 import BeautifulSoup
 #	This function is to get page content
 # from the url and store it.
 #						by DoubleZ
-#						2016.05.10
+#						2016.05.8
 ###########################################
 
 
-
+# crawl and store
 def crawl(url, file):
 	try:
 		req = urllib.request.Request(url)
@@ -35,6 +35,7 @@ def crawl(url, file):
 		else:
 			print("get "+url+" failed")
 
+# get url from file to crawl
 def gettitle(path, savepath):
 	try:
 		file = open(path, 'r')

@@ -37,6 +37,7 @@ if __name__ == '__main__':
 	if Num not in range(1,6):
 		usage()
 
+	# get text from corpus file
 	text = ""
 	try:
 		file = open('Corpus', 'r')

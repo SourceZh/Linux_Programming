@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 ######################################################
 
 
-
+# get title url from the specific page
 def crawl(url, path):
 	try:
 		top = None
@@ -35,6 +35,7 @@ def crawl(url, path):
 	except urllib.error.HTTPError:
 		print("get "+url+" failed")
 
+# get title url from the specific js code
 def crawljs	(url, path):
 	try:
 		req = urllib.request.Request(url)
