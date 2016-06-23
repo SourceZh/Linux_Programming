@@ -5,24 +5,28 @@
 1. pyhton3(将目录下.py文件第一行解释器路径改为本地python3的路径)
 2. python库 Beautiful Soup
 3. python HTML 解析器 html5lib
+
 ### 文件说明
-*data/line\_name* 人工维护的数据文件，保存了线路名和线路号之间的对应关系
+data/line\_name 人工维护的数据文件，保存了线路名和线路号之间的对应关系
 
-*data/\*\_staion\_name* `crawldata.py`产生的数据文件，保存了车站名和车站*号之间的对应关系
+data/\*\_staion\_name `crawldata.py`产生的数据文件，保存了车站名和车站*号之间的对应关系
 
-*data/\*\_staiton\_distance* `crawldata.py`产生的数据文件，保存了车站间的距离信息
+data/\*\_staiton\_distance `crawldata.py`产生的数据文件，保存了车站间的距离信息
 
-*crawl.py* 网页爬虫，爬取了[北京地铁](http://www.bjsubway.com/station/zjgls/)上面的地铁数据信息，存储在目录`data/`下。
+crawl.py 网页爬虫，爬取了[北京地铁](http://www.bjsubway.com/station/zjgls/)上面的地铁数据信息，存储在目录`data/`下。
 
-*findmin.py* 主要程序，提供了一个交互式的环境，用于查询地铁线路线路信息，地铁车站号信息，车站间最短路径。
+findmin.py 主要程序，提供了一个交互式的环境，用于查询地铁线路线路信息，地铁车站号信息，车站间最短路径。
 
-*README.md* 本文件
+README.md 本文件
 ### 程序说明
 第一次运行时，若`data`目录下缺少`*_station_name`或者`*_station_distance`文件，请运行`crawldata.py`程序重新生成。
 
 运行`findmin.py`进入交互式命令环境。输入*help*查看帮助。
+
 1. `q [STATION]` 查询某个特定地铁站的信息.\[STATION\]既可以是车站名，也可是车站号
+
 样例：`q 1003`
+
 ```bash
 车站名称：海淀黄庄
 换乘车站
@@ -30,15 +34,20 @@
 站号：0407 1003 
 方向：中关村 人民大学 苏州街 知春里
 ```
+
 2. `r [STATION1] [STATION2]` 查询两站间最短路径。
+
 样例：`r 巴沟 北京大学东门`
+
 ```bash
 最短路线推荐(长度：3847)
 巴沟->苏州街->海淀黄庄(换乘4号线)->中关村->北京大学东门
 ```bash
 
 3. `s [LINE]` 查询某个特定地铁线路的全部车站信息。\[LINE\]既可以是地铁线路名，也可以是地铁线路号
+
 样例：`s 机场线`
+
 ```bash
 车站：20	机场线
 2001	东直门(换乘 2号线 13号线)
@@ -48,7 +57,9 @@
 ```
 
 4. `l` 查询全部地铁线路信息。
+
 样例：`l`
+
 ```bash
 01	1号线
 02	2号线
@@ -69,6 +80,8 @@
 20	机场线
 21	大兴线
 ```
+
 5. `e` 退出程序
+
 6. `h` 显示帮助
 
